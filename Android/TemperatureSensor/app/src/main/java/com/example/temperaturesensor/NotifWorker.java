@@ -78,9 +78,9 @@ public class NotifWorker extends Worker {
                         SensorOutput = SensorOutputArray.getString("field1");
                         Log.d("hoi", SensorOutput);
 
-                        if(SensorOutput.compareTo(lowTemp) < 0){
+                        if(Float.parseFloat(SensorOutput) < Float.parseFloat(lowTemp)){
                             MakeNotification("The temperature is too cold", "Turn up the heat");
-                        } else if(SensorOutput.compareTo(highTemp) > 0){
+                        } else if(Float.parseFloat(SensorOutput) > Float.parseFloat(highTemp)){
                             MakeNotification("The temperature is too hot", "Turn down the heat");
                         }
                         db.addTemp(SensorOutput,highTemp,lowTemp);

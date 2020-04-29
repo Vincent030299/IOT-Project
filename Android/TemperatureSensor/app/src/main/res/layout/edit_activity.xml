@@ -50,6 +50,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/lowInput"
         app:layout_constraintStart_toStartOf="parent"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lowLabel"/>
 
@@ -59,6 +60,7 @@
         android:id="@+id/highInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="number"
         app:layout_constraintTop_toBottomOf="@id/highlabel"/>
 
     <Button
